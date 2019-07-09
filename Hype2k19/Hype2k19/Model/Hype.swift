@@ -12,7 +12,7 @@ import CloudKit
 struct Constants {
     static let recordTypeKey = "Hype"
     fileprivate static let recordTextKey = "content"
-    fileprivate static let recordTimestampKey = "Timestamp"
+    static let recordTimestampKey = "Timestamp"
 }
 
 class Hype {
@@ -20,7 +20,7 @@ class Hype {
     let hypeText: String
     let timestamp: Date
     // Creating a Hype
-    init(hypeText: String, timeStamp: Date) {
+    init(hypeText: String, timeStamp: Date = Date()) {
         self.hypeText = hypeText
         self.timestamp = timeStamp
         
