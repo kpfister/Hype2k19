@@ -12,6 +12,8 @@
 		FB452D5B22D4E2E800201141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB452D5A22D4E2E800201141 /* Assets.xcassets */; };
 		FB452D5E22D4E2E800201141 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB452D5C22D4E2E800201141 /* LaunchScreen.storyboard */; };
 		FB452D6722D4F7D800201141 /* HypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB452D6622D4F7D800201141 /* HypeTableViewController.swift */; };
+		FB452D6E22D4F8CE00201141 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB452D6D22D4F8CE00201141 /* CloudKit.framework */; };
+		FB452D7022D4F9F700201141 /* Hype.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB452D6F22D4F9F700201141 /* Hype.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,9 @@
 		FB452D5D22D4E2E800201141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB452D5F22D4E2E800201141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB452D6622D4F7D800201141 /* HypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypeTableViewController.swift; sourceTree = "<group>"; };
+		FB452D6B22D4F8CB00201141 /* Hype2k19.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hype2k19.entitlements; sourceTree = "<group>"; };
+		FB452D6D22D4F8CE00201141 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		FB452D6F22D4F9F700201141 /* Hype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hype.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB452D6E22D4F8CE00201141 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +46,7 @@
 			children = (
 				FB452D5222D4E2E700201141 /* Hype2k19 */,
 				FB452D5122D4E2E700201141 /* Products */,
+				FB452D6C22D4F8CE00201141 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,9 +61,12 @@
 		FB452D5222D4E2E700201141 /* Hype2k19 */ = {
 			isa = PBXGroup;
 			children = (
+				FB452D6B22D4F8CB00201141 /* Hype2k19.entitlements */,
+				FB452D6A22D4F88900201141 /* Entitlements */,
 				FB452D6822D4F7DE00201141 /* Controllers */,
 				FB452D6522D4F71C00201141 /* Resources */,
 				FB452D5722D4E2E700201141 /* Main.storyboard */,
+				FB452D6F22D4F9F700201141 /* Hype.swift */,
 			);
 			path = Hype2k19;
 			sourceTree = "<group>";
@@ -86,6 +96,21 @@
 				FB452D6622D4F7D800201141 /* HypeTableViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FB452D6A22D4F88900201141 /* Entitlements */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entitlements;
+			sourceTree = "<group>";
+		};
+		FB452D6C22D4F8CE00201141 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB452D6D22D4F8CE00201141 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +145,14 @@
 				TargetAttributes = {
 					FB452D4F22D4E2E700201141 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -161,6 +194,7 @@
 			files = (
 				FB452D5422D4E2E700201141 /* AppDelegate.swift in Sources */,
 				FB452D6722D4F7D800201141 /* HypeTableViewController.swift in Sources */,
+				FB452D7022D4F9F700201141 /* Hype.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +340,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Hype2k19/Hype2k19.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4J7B9732LY;
 				INFOPLIST_FILE = "$(SRCROOT)/Hype2k19/Resources/Info.plist";
@@ -324,6 +359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Hype2k19/Hype2k19.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4J7B9732LY;
 				INFOPLIST_FILE = "$(SRCROOT)/Hype2k19/Resources/Info.plist";
